@@ -1,0 +1,7 @@
+###> custom ###
+/.idea
+.DS_Store
+/docker/data/*
+/docker/logs/*
+NOTES.md
+###< custom ###
