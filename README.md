@@ -65,6 +65,16 @@ php artisan migrate:fresh
 php artisan db:seed
 ```
 
+#### .env
+
+First copy and paste the `.env.example` and rename it to `.env`
+
+There are two new rows:
+
+The `JWT_SECRET` which you can generate by running this command from inside the php container `php artisan jwt:secret` 
+
+The `JWT_TTL` which is how much is the expiration time for the token and default is one minute for testing purposes
+
 #### Npm - Angular app
 
 Navigate to `/spa` through cli and run the following:
