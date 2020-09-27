@@ -13,6 +13,9 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+// API route groups
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->post('login', 'AuthController@login');
+    $router->post('logout', 'AuthController@logout');
+    $router->get('expiration-check', 'AuthController@expirationCheck');
 });

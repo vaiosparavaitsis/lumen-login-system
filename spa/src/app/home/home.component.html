@@ -1,0 +1,5 @@
+<div *ngIf="isUserLoggedIn">
+    <h3>Welcome {{ firstname }} {{ lastname }}</h3>
+
+    <button type="button" (click)="logout()" class="btn btn-dark mt-5">Logout</button>
+</div>

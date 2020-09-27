@@ -1,0 +1,14 @@
+<form class="text-center border border-light p-5" (ngSubmit)="login()" *ngIf="!isUserLoggedIn">
+    <p class="h4 mb-4">Sign in</p>
+
+    <input type="email" [(ngModel)]="email" name="email" id="email" class="form-control mb-4" placeholder="E-mail">
+    <input type="password" [(ngModel)]="password" name="password" id="password" class="form-control mb-4" placeholder="Password">
+
+    <button class="btn btn-info btn-block my-4" [ngClass]="{'disabled': loading}" type="submit">Sign in</button>
+
+    <div class="alert alert-danger" role="alert" *ngIf="errorMessage">{{ errorMessage }}</div>
+</form>
+
+<div *ngIf="isUserLoggedIn">
+    <h3>You are already logged in as {{ firstname }} {{ lastname }}</h3>
+</div>
